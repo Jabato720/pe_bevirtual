@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Financiero Profesional - Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .excel-table { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            font-size: 13px;
+            border-collapse: collapse;
+        }
+        .sticky-header { 
+            position: sticky; 
+            left: 0; 
+            background-color: #f9fafb; 
+            z-index: 10; 
+        }
+        .sticky-cell { 
+            position: sticky; 
+            left: 0; 
+            background-color: white; 
+            z-index: 10; 
+        }
+        .carencia-text { color: #d97706; font-weight: 500; }
+        .preventa-text { color: #16a34a; font-weight: 600; }
+        .escalado-text { color: #2563eb; font-weight: 500; }
+        .negative { color: #dc2626; }
+        .positive { color: #16a34a; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen">
+        <!-- Header -->
+        <header class="bg-white shadow-sm border-b">
+            <div class="max-w-7xl mx-auto px-8 py-6">
+                <h1 class="text-3xl font-bold text-gray-900">Plan Financiero Profesional</h1>
+                <p class="text-gray-600 mt-2">Gimnasio/Centro Fitness - Proyecciones Excel Bancarias</p>
+            </div>
+        </header>
+
+        <!-- Demo Content -->
+        <main class="max-w-7xl mx-auto px-8 py-8">
+            <!-- Status Card -->
+            <div class="bg-gray-50 border border-gray-300 rounded-lg p-6 mb-8">
+                <h2 class="text-xl font-semibold text-gray-800 mb-4">Sistema Completamente Implementado</h2>
+                <p class="text-gray-700 mb-4">Todas las funcionalidades críticas del Excel han sido implementadas correctamente:</p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-white p-3 rounded border border-gray-200">
+                        <div class="text-xs text-gray-500 uppercase tracking-wide">Costes Fijos</div>
+                        <div class="text-lg font-semibold text-gray-800">8,548€</div>
+                        <div class="text-xs text-gray-600">Exacto como Excel</div>
+                    </div>
+                    <div class="bg-white p-3 rounded border border-gray-200">
+                        <div class="text-xs text-gray-500 uppercase tracking-wide">Carencia Alquiler</div>
+                        <div class="text-lg font-semibold text-gray-800">2 meses</div>
+                        <div class="text-xs text-gray-600">Enero y Febrero 0€</div>
+                    </div>
+                    <div class="bg-white p-3 rounded border border-gray-200">
+                        <div class="text-xs text-gray-500 uppercase tracking-wide">Pre-venta</div>
+                        <div class="text-lg font-semibold text-gray-800">105 clientes</div>
+                        <div class="text-xs text-gray-600">Enero apertura</div>
+                    </div>
+                    <div class="bg-white p-3 rounded border border-gray-200">
+                        <div class="text-xs text-gray-500 uppercase tracking-wide">Personal Escalado</div>
+                        <div class="text-lg font-semibold text-gray-800">Por trimestre</div>
+                        <div class="text-xs text-gray-600">0→815→1630→2445€</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ejemplo Tabla Excel Transpuesta -->
+            <div class="bg-white rounded-lg shadow-sm border p-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Proyecciones Detalladas - Nuevo Diseño</h3>
+                <p class="text-gray-600 mb-6">Tabla transpuesta profesional: meses como columnas, conceptos como filas (estilo Excel bancario)</p>
+                
+                <div class="overflow-x-auto excel-table">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="bg-gray-50 border-b border-gray-200">
+                                <th class="py-3 px-4 text-left font-semibold text-gray-700 sticky-header min-w-[160px]">
+                                    Concepto
+                                </th>
+                                <th class="py-3 px-3 text-center font-semibold text-gray-700 min-w-[100px] border-l border-gray-200">
+                                    <div>Ene</div>
+                                    <div class="text-xs text-gray-500">'24</div>
+                                </th>
+                                <th class="py-3 px-3 text-center font-semibold text-gray-700 min-w-[100px] border-l border-gray-200">
+                                    <div>Feb</div>
+                                    <div class="text-xs text-gray-500">'24</div>
+                                </th>
+                                <th class="py-3 px-3 text-center font-semibold text-gray-700 min-w-[100px] border-l border-gray-200">
+                                    <div>Mar</div>
+                                    <div class="text-xs text-gray-500">'24</div>
+                                </th>
+                                <th class="py-3 px-3 text-center font-semibold text-gray-700 min-w-[100px] border-l border-gray-200">
+                                    <div>Abr</div>
+                                    <div class="text-xs text-gray-500">'24</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Clientes Nuevos -->
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="py-2 px-4 font-medium text-gray-900 sticky-cell border-r border-gray-200">
+                                    Clientes Nuevos
+                                </td>
+                                <td class="py-2 px-3 text-right border-l border-gray-100">
+                                    <span class="preventa-text">105</span>
+                                    <div class="text-xs text-green-600">Pre-venta</div>
+                                </td>
+                                <td class="py-2 px-3 text-right border-l border-gray-100">65</td>
+                                <td class="py-2 px-3 text-right border-l border-gray-100">85</td>
+                                <td class="py-2 px-3 text-right border-l border-gray-100">95</td>
+                            </tr>
+
+                            <!-- Total Clientes -->
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 bg-blue-25">
+                                <td class="py-2 px-4 font-semibold text-gray-900 sticky-cell border-r border-gray-200">
+                                    Total Clientes
+                                </td>
+                                <td class="py-2 px-3 text-right font-semibold text-blue-700 border-l border-gray-100">105</td>
+                                <td class="py-2 px-3 text-right font-semibold text-blue-700 border-l border-gray-100">170</td>
+                                <td class="py-2 px-3 text-right font-semibold text-blue-700 border-l border-gray-100">255</td>
+                                <td class="py-2 px-3 text-right font-semibold text-blue-700 border-l border-gray-100">350</td>
+                            </tr>
+
+                            <!-- Separador -->
+                            <tr class="border-b-2 border-gray-300"><td colspan="5" class="py-1"></td></tr>
+
+                            <!-- Ingresos Totales -->
+                            <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                <td class="py-2 px-4 font-semibold text-gray-900 sticky-cell border-r border-gray-200">
+                                    Ingresos Totales
+                                </td>
+                                <td class="py-2 px-3 text-right font-semibold positive border-l border-gray-100">4,725€</td>
+                                <td class="py-2 px-3 text-right font-semibold positive border-l border-gray-100">7,650€</td>
+                                <td class="py-2 px-3 text-right font-semibold positive border-l border-gray-100">11,475€</td>
+                                <td class="py-2 px-3 text-right font-semibold positive border-l border-gray-100">15,750€</td>
+                            </tr>
+
+                            <!-- Separador -->
+                            <tr class="border-b-2 border-gray-300"><td colspan="5" class="py-1"></td></tr>
+
+                            <!-- Alquiler -->
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="py-2 px-4 font-medium text-gray-900 sticky-cell border-r border-gray-200">
+                                    Alquiler
+                                </td>
+                                <td class="py-2 px-3 text-right border-l border-gray-100">
+                                    <span class="carencia-text">0€</span>
+                                    <div class="text-xs text-orange-600">Carencia</div>
+                                </td>
+                                <td class="py-2 px-3 text-right border-l border-gray-100">
+                                    <span class="carencia-text">0€</span>
+                                    <div class="text-xs text-orange-600">Carencia</div>
+                                </td>
+                                <td class="py-2 px-3 text-right border-l border-gray-100">3,000€</td>
+                                <td class="py-2 px-3 text-right border-l border-gray-100">3,000€</td>
+                            </tr>
+
+                            <!-- Personal -->
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="py-2 px-4 font-medium text-gray-900 sticky-cell border-r border-gray-200">
+                                    Personal
+                                </td>
+                                <td class="py-2 px-3 text-right border-l border-gray-100">
+                                    <span class="escalado-text">0€</span>
+                                    <div class="text-xs text-blue-600">T1</div>
+                                </td>
+                                <td class="py-2 px-3 text-right border-l border-gray-100">
+                                    <span class="escalado-text">0€</span>
+                                    <div class="text-xs text-blue-600">T1</div>
+                                </td>
+                                <td class="py-2 px-3 text-right border-l border-gray-100">
+                                    <span class="escalado-text">0€</span>
+                                    <div class="text-xs text-blue-600">T1</div>
+                                </td>
+                                <td class="py-2 px-3 text-right border-l border-gray-100">
+                                    <span class="escalado-text">815€</span>
+                                    <div class="text-xs text-blue-600">T2</div>
+                                </td>
+                            </tr>
+
+                            <!-- Otros Costes -->
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="py-2 px-4 font-medium text-gray-900 sticky-cell border-r border-gray-200">
+                                    Otros Costes Fijos
+                                </td>
+                                <td class="py-2 px-3 text-right border-l border-gray-100">
+                                    18,548€
+                                    <div class="text-xs text-purple-600">+Pub. inicial</div>
+                                </td>
+                                <td class="py-2 px-3 text-right border-l border-gray-100">8,548€</td>
+                                <td class="py-2 px-3 text-right border-l border-gray-100">8,548€</td>
+                                <td class="py-2 px-3 text-right border-l border-gray-100">8,548€</td>
+                            </tr>
+
+                            <!-- Separador -->
+                            <tr class="border-b-2 border-gray-300"><td colspan="5" class="py-1"></td></tr>
+
+                            <!-- EBITDA -->
+                            <tr class="border-b border-gray-200 hover:bg-gray-50 bg-gray-100">
+                                <td class="py-3 px-4 font-bold text-gray-900 sticky-cell border-r border-gray-200">
+                                    EBITDA
+                                </td>
+                                <td class="py-3 px-3 text-right font-bold negative border-l border-gray-100">-13,823€</td>
+                                <td class="py-3 px-3 text-right font-bold negative border-l border-gray-100">-898€</td>
+                                <td class="py-3 px-3 text-right font-bold negative border-l border-gray-100">-73€</td>
+                                <td class="py-3 px-3 text-right font-bold positive border-l border-gray-100">3,387€</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-6 text-sm text-gray-600">
+                    <h4 class="font-semibold text-gray-800 mb-2">Condiciones Especiales Implementadas:</h4>
+                    <ul class="space-y-1">
+                        <li><strong>Carencia:</strong> Alquiler 0€ primeros 2 meses</li>
+                        <li><strong>Pre-venta:</strong> 105 clientes antes de apertura</li>
+                        <li><strong>T1/T2/T3/T4:</strong> Personal escalado por trimestre</li>
+                        <li><strong>Otros gastos:</strong> Incluye publicidad inicial 10,000€ + costes fijos 8,548€</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Archivos Implementados -->
+            <div class="bg-gray-50 border border-gray-300 rounded-lg p-6 mt-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Archivos Implementados</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-700 mb-2">Componentes Principales:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• CustomerManagementSystem.jsx</li>
+                            <li>• MultipleRevenueStreams.jsx</li>
+                            <li>• OperationalCosts.jsx</li>
+                            <li>• OperationalKPIs.jsx</li>
+                            <li>• DetailedMonthlyProjections.jsx (rediseñado)</li>
+                            <li>• Sidebar.jsx (nuevo)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-700 mb-2">Datos y Lógica:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• businessModelsProfessional.js</li>
+                            <li>• FinancialCalculatorProfessional.js</li>
+                            <li>• ProfessionalCalculator.jsx (layout actualizado)</li>
+                            <li>• Paleta de colores profesional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mejoras Implementadas -->
+            <div class="bg-gray-100 rounded-lg p-6 mt-8">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Mejoras UX/UI Implementadas</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold text-gray-700 mb-3">Diseño Profesional:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Tabla transpuesta (meses como columnas)</li>
+                            <li>• Navegación lateral elegante</li>
+                            <li>• Paleta de colores neutra</li>
+                            <li>• Sin iconos decorativos</li>
+                            <li>• Look empresarial minimalista</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-700 mb-3">Funcionalidad:</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li>• Layout responsive con sidebar</li>
+                            <li>• Navegación agrupada inteligente</li>
+                            <li>• Tabla Excel con scroll horizontal</li>
+                            <li>• Columnas fijas para fácil lectura</li>
+                            <li>• Tipografía monospace profesional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
